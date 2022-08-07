@@ -1,35 +1,51 @@
 h1 {
     color: purple;
+    text-align: center;
 }
 
 .container {
     display: grid;
-
     grid-template-columns: 1 fr 1 fr 1 fr 1 fr 1 fr 1 fr 1 fr;
     /* grid-template-columns: 100px 100px 100px 100px 100px 100px 100px ; */
     grid-template-rows: 1 fr 1 fr 1 fr 1 fr 1 fr 1 fr;
+    width: 1000px;
+    margin: 30px auto;
 }
 
-.player1{
+.players{
+    display: flex;
+    justify-content: center;
 
 }
 
+#player1{
+    display: flex;
+    grid: 1 / 3;
+    padding: 0 20px 0 0;
+}
+.test{
+
+}
 .player1color {
-    display: block;
+    display: flex;
     background-color: blue;
     height: 50px;
     width: 50px;
     margin: 10px;
     border-radius: 50%;
     border: 1px solid black;
+    grid: 1 / 3;
 }
 
-.player2 {
+#player2 {
+    display: flex;
+    grid: 1 / 3;
+    padding: 0 0 20px;
 
 }
 
 .player2color {
-    display: block;
+    display: flex;
     background-color: red;
     height: 50px;
     width: 50px;
@@ -42,12 +58,25 @@ h1 {
     display: flex;
 }
 
+.instructions {
+    display: flex;
+}
+
+.restart {
+    
+}
+
 .pointer{
- 
+    display: flex;
+}
+
+.pointers{
+    display: grid;
+
 }
 
 .all-circles {
-    display: flex;
+    display: grid;
 
     /* display: block;
     background-color: grey;
@@ -83,8 +112,8 @@ h1 {
 
 .circle-1 {
     /* display: block; */
-    grid-row: 2;
-    grid-column: 1;
+    grid-row: 1;
+    grid-column: 2;
     background-color: grey;
     /* height: 80px;
     width: 80px;
@@ -104,17 +133,31 @@ h1 {
 }
 
 .circle-3 {
+    grid-row: 1;
+    grid-column: 4;
     
 }
 
 .circle-4 {
+    grid-row: 1;
+    grid-column: 5;
     
 }
 
 .circle-5 {
+    grid-row: 1;
+    grid-column: 6;
     
 }
 
 .circle-6 {
+    grid-row: 1;
+    grid-column: 7;
+    
+}
+
+.circle-7 {
+    grid-row: 2;
+    grid-column: 1;
     
 }
