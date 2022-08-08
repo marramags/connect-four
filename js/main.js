@@ -87,20 +87,86 @@ const winCombos = [
 
 ]
 
+let testColumn = [5, 5, 5, 5, 5, 5, 5]
+
+// column 0 array
+const column0 = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5]]
+const column1 = [[1,0],[1,1],[1,2],[1,3],[1,4],[1,5]]
+
+// let gameBoard = [
+//     '', '', '', '', '', '', '',
+//     '', '', '', '', '', '', '',
+//     '', '', '', '', '', '', '',
+//     '', '', '', '', '', '', '',
+//     '', '', '', '', '', '', '',
+//     '', '', '', '', '', '', '',
+// ]
+
 let gameBoard = [
-    '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '',
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
 ]
 
 
 let player1 = [];
 let player2 = [];
+let currentPlayer;
 
 let winner;
 let turns;
 
+// event listeners
+let message = document.querySelector('.message');
+const pointers = document.querySelectorAll('.pointers');
+const pointer0 = document.querySelector('.pointer-0');
+const pointer1 = document.querySelector('.pointer-1');
+const allCircles = document.querySelectorAll('.all-circles');
+// console.log('pointer0');
 
+// allCircles.setAttribute('style','background-color: red');
+
+startGame();
+
+function startGame() {
+    let gameBoard = [
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+    ]
+    player1 = [];
+    player2 = [];
+    winner = null;
+    let turns = player1;
+    currentPlayer = player1;
+    const pointers = document.querySelectorAll('.pointers');
+    const pointer0 = document.querySelector('.pointer-0');
+
+}
+
+// allCircles.addEventListener('click', playerMoves);
+
+// pointer0.addEventListener('click', playerMoves);
+// pointer1.addEventListener('click', playerMoves);
+
+
+function playGame() {
+    
+}
+
+//when a player clicks on a pointer, the last row in the coloumn will change color based on the player 
+function playerMoves() { 
+
+}
+
+
+
+function restartGame() {
+
+}
