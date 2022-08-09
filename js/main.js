@@ -175,7 +175,7 @@ function pointer0Click (currentColor) {
         
         })
     }
-
+}
 // function pointer0Click () {
 //     gameBoardArr[0].reverse()
 //     for (let i = 0; i<gameBoardArr[0].length; i++) {
