@@ -149,19 +149,46 @@ const restBtn = document.querySelector('.restart')
 //     })
 // }
 
-function pointer0Click () {
+// adding eventlisteners
+pointer0.addEventListener('click', pointer0Click);
+pointer1.addEventListener('click', pointer1Click);
+pointer2.addEventListener('click', pointer2Click);
+pointer3.addEventListener('click', pointer3Click);
+pointer4.addEventListener('click', pointer4Click);
+pointer5.addEventListener('click', pointer5Click);
+
+
+function pointer0Click (currentColor) {
     gameBoardArr[0].reverse()
     for (let i = 0; i<gameBoardArr[0].length; i++) {
-        if (gameBoardArr[0][i] === ) {
-            
-        }
-
-        // let testing = gameBoardArr[0][i]
+        // if(gameBoardArr - 1 )
         // console.log(gameBoardArr[0][i]);
-        // testing.reverse()
-        // console.log(testing);
+        let circleColor = currentColor.style;
+        pointer0.addEventListener('click', function (){ 
+            if (gameBoardArr[0] === circleColor.backgroundColor !== 'red'){
+                // allCircles.setAttribute('style', 'background-color: red;')
+                circleColor.backgroundColor = 'red';
+        };
+    
+        
+        // if (gameBoardArr[0][i])
+        
+        })
     }
-}
+
+// function pointer0Click () {
+//     gameBoardArr[0].reverse()
+//     for (let i = 0; i<gameBoardArr[0].length; i++) {
+//         if (gameBoardArr[0][i] === ) {
+            
+//         }
+
+//         // let testing = gameBoardArr[0][i]
+//         // console.log(gameBoardArr[0][i]);
+//         // testing.reverse()
+//         // console.log(testing);
+//     }
+// }
 
 function pointer1Click () {
     gameBoardArr[1].reverse()
@@ -169,6 +196,7 @@ function pointer1Click () {
         console.log(gameBoardArr[1][i]);
     }
 }
+
 
 for (let i =0 ; i < allCircles.length; i++) {
     allCircles[i].addEventListener('click', (e) => {
