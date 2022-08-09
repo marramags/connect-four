@@ -104,9 +104,36 @@ let gameBoardArr = [
     const allCircles = document.querySelectorAll('.circles'); //grabbing all circles
     let currentPlayer = true;
     // allCircles.addEventListener 
-    
+
+
+    startGame();
+
+function startGame () {
+ let board = [null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null,
+             ]
+             let currentPlayer = true;
+             playGame();
+}
+
+function playGame () {
+    switchColors()
+
+}
+
+allCircles.forEach(redColor => {
+    if (redColor.backgroundColor === 'red') {
+        player1.push(redColor.getAttribute('id'))
+    }
+})
+// console.log(player1)
     
     // add event listener for click: changes colors and calls changeTurns function
+    function switchColors () {
     allCircles.forEach(currentCircle => {
         let circleStyle = currentCircle.style;
         currentCircle.addEventListener('click', function () {
@@ -120,6 +147,7 @@ let gameBoardArr = [
             changeTurns()
         } )
     })
+}
     
     
     
@@ -131,7 +159,7 @@ let gameBoardArr = [
             this.innertext = "!"
         }
         currentPlayer = !currentPlayer
-        playGame();
+      
     }
     
 
