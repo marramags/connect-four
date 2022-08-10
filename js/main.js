@@ -190,12 +190,13 @@ function playGame () {
 // dropping to bottom idea
 // allCircles.forEach(currentCircle => {
     for (let i = 0; i < allCircles; i++) {
+
         allCircles[i].onclick = () => {
        if (allCircles[i +7].classList.contains('last') & !allCircles[i].classList.contains('last')){
         if (currentPlayer == true) {  
-            squares[i].classList.add('taken')
+            circles[i].classList.add('last')
         } else if (currentPlayer == false) {
-            squares[i].classList.add('taken')
+            circles[i].classList.add('last')
        } else alert('cant go here')
         
         // if (currentPlayer == true) {
