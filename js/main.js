@@ -123,32 +123,20 @@ resetBtn.addEventListener('click', startGame);
 
 let columns;
 
+
+
 // pointer0.addEventListener('click', function () {
-//     column.forEach(space =>{
-//          space = 5
-//         if (row[5] === null){
-//             switchColors ()
-//             index -= 1;
+//     console.log(column1)
+//         if (column1[5] === null){
+//             switchColors()
+//             column1[5] -= 1;
 //         } else {
 //             return;
 //         }
-//     })
-// });
+//     });
 
-pointer0.addEventListener('click', function () {
-    // console.log(column1)
-    for (let i = column1.length; i > 0 ; i--) {
-        console.log(column1[i])
-    }
-    //     //  space = 5
-    //     if (space.row[5] === null){
-    //         switchColors ()
-    //         index -= 1;
-    //     } else {
-    //         return;
-    //     }
-    // })
-});
+
+
 
 
 
@@ -166,10 +154,10 @@ function startGame () {
              playGame();
 }
 
-function playGame () {
-    switchColors()
+// function playGame () {
+//     switchColors()
 
-}
+// }
 
 function playGame () {
     
@@ -185,23 +173,6 @@ function playGame () {
     // console.log(player1)
     }
 
-// allCircles.forEach(redColor => {
-//     if (redColor.backgroundColor === 'red') {
-//         player1.push(redColor.getAttribute('id'))
-//     }
-// })
-// console.log(player1)
-
-
-// allCircles.forEach(currentCircle => {
-//  currentCircle.addEventListener('click', function () {
-//     alert('you got this')
-//  })
-//  })
-
-// function dropToBottom
-
-// for (let y = )
 
 
 // dropping to bottom idea
@@ -240,10 +211,8 @@ function playGame () {
         currentCircle.addEventListener('click', function () {
             if (currentPlayer === true && circleStyle.backgroundColor !== '#4FD2EA'&& circleStyle.backgroundColor !== '#BD7BC8') {
                 circleStyle.backgroundColor = '#4FD2EA';
-                // countClicks += 1;
             } else if (circleStyle.backgroundColor !== '#4FD2EA' && circleStyle.backgroundColor !== '#BD7BC8') {
                 circleStyle.backgroundColor = '#BD7BC8';
-                // countClicks += 1;
             }
             changeTurns()
         } )
@@ -278,9 +247,52 @@ function playGame () {
 
 
 
+// 8/10
+// pointer0.addEventListener('click', function () {
+//     column.forEach(space =>{
+//          space = 5
+//         if (row[5] === null){
+//             switchColors ()
+//             index -= 1;
+//         } else {
+//             return;
+//         }
+//     })
+// });
+
+// pointer0.addEventListener('click', function () {
+//     // console.log(column1)
+//     for (let i = 0; i < column1.length ; i++) {
+//         console.log(column1[5])
+//         let index = column1[5]
+//         if (index === null){
+//             switchColors()
+//             column1[5] -= 1;
+//         } else {
+//             return;
+//         }
+//     }
+   
+// });
 
 
+// allCircles.forEach(redColor => {
+//     if (redColor.backgroundColor === 'red') {
+//         player1.push(redColor.getAttribute('id'))
+//     }
+// })
+// console.log(player1)
 
+
+// allCircles.forEach(currentCircle => {
+//  currentCircle.addEventListener('click', function () {
+//     alert('you got this')
+//  })
+//  })
+
+// function dropToBottom
+
+// for (let y = )
 
 
 
