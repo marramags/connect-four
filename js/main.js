@@ -122,17 +122,17 @@ resetBtn.addEventListener('click', startGame);
 
 let columns;
 
-pointer0.addEventListener('click', function () {
-    column.forEach(space =>{
-        let index = 5
-        if (space,row[0] === null){
-            switchColors ()
-            index -= 1;
-        } else {
-            return;
-        }
-    })
-});
+// pointer0.addEventListener('click', function () {
+//     column.forEach(space =>{
+//         let index = 5
+//         if (space,row[0] === null){
+//             switchColors ()
+//             index -= 1;
+//         } else {
+//             return;
+//         }
+//     })
+// });
 
 
 
@@ -188,24 +188,31 @@ function playGame () {
 
 
 // dropping to bottom idea
-allCircles.forEach(space => {
-    currentCircle.addEventListener('click', function () {
-       if (currentCircle.classList.contains('last') &&!currentCircle.classList.contains('last')){
-        if (currentPlayer == true) {
-            currentCircle.classList.add('last')
-        } else if (currentPlayer == false){
-            currentCircle.classList.add('last')
+// allCircles.forEach(currentCircle => {
+    for (let i = 0; i < allCircles; i++) {
+        allCircles[i].onclick = () => {
+       if (allCircles[i +7].classList.contains('last') & !allCircles[i].classList.contains('last')){
+        if (currentPlayer == true) {  
+            squares[i].classList.add('taken')
+        } else if (currentPlayer == false) {
+            squares[i].classList.add('taken')
+       } else alert('cant go here')
+        
+        // if (currentPlayer == true) {
+        //     currentCircle.classList.add('last')
+        // } else if (currentPlayer == false){
+        //     currentCircle.classList.add('last')
         }
        }
-    })
-    })
+    }
    
 
-// for (let i =0; i < allCircles; i++) {
+// for (let i = 0; i < allCircles.length; i++) {
+//     allCircles.forEach(() => {
 //     allCircles.addEventListener('click', function (){
-//         alert('you got this' + i)
+//         alert('you got this' + i);
 //     })
-// }
+// });
 
 
 
