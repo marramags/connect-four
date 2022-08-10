@@ -106,6 +106,7 @@ let gameBoardArr = [
     const pointer1 = document.querySelector('.pointer-1');
 
 
+
     const column1 = document.querySelectorAll('.column1')
     const column2 = document.querySelectorAll('.column2')
     const resetBtn = document.querySelector('.restart');
@@ -190,13 +191,13 @@ function playGame () {
 // dropping to bottom idea
 // allCircles.forEach(currentCircle => {
     for (let i = 0; i < allCircles; i++) {
-
-        allCircles[i].onclick = () => {
-       if (allCircles[i +7].classList.contains('last') & !allCircles[i].classList.contains('last')){
+        allCircles[i].addEventListener('click', function () {
+        // allCircles[i].onclick = () => {
+       if (allCircles[i + 7].classList.contains('last') & !allCircles[i].classList.contains('last')){
         if (currentPlayer == true) {  
-            circles[i].classList.add('last')
+            allCircles[i].classList.add('last')
         } else if (currentPlayer == false) {
-            circles[i].classList.add('last')
+            allCircles[i].classList.add('last')
        } else alert('cant go here')
         
         // if (currentPlayer == true) {
@@ -204,9 +205,10 @@ function playGame () {
         // } else if (currentPlayer == false){
         //     currentCircle.classList.add('last')
         }
-       }
-    }
-   
+       
+    })
+
+}
 
 // for (let i = 0; i < allCircles.length; i++) {
 //     allCircles.forEach(() => {
