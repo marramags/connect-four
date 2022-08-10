@@ -125,8 +125,8 @@ let columns;
 
 // pointer0.addEventListener('click', function () {
 //     column.forEach(space =>{
-//         let index = 5
-//         if (space,row[0] === null){
+//          space = 5
+//         if (row[5] === null){
 //             switchColors ()
 //             index -= 1;
 //         } else {
@@ -134,6 +134,21 @@ let columns;
 //         }
 //     })
 // });
+
+pointer0.addEventListener('click', function () {
+    // console.log(column1)
+    for (let i = column1.length; i > 0 ; i--) {
+        console.log(column1[i])
+    }
+    //     //  space = 5
+    //     if (space.row[5] === null){
+    //         switchColors ()
+    //         index -= 1;
+    //     } else {
+    //         return;
+    //     }
+    // })
+});
 
 
 
@@ -157,6 +172,7 @@ function playGame () {
 }
 
 function playGame () {
+    
     allCircles.forEach(redColor => {
             player1 = [];
         if (redColor.backgroundColor === 'red') {
@@ -191,22 +207,17 @@ function playGame () {
 // dropping to bottom idea
 // allCircles.forEach(currentCircle => {
     for (let i = 0; i < allCircles; i++) {
-        allCircles[i].addEventListener('click', function () {
-        // allCircles[i].onclick = () => {
+        // allCircles[i].addEventListener('click', function () {
+        allCircles[i].onclick = () => {
        if (allCircles[i + 7].classList.contains('last') & !allCircles[i].classList.contains('last')){
         if (currentPlayer == true) {  
             allCircles[i].classList.add('last')
         } else if (currentPlayer == false) {
             allCircles[i].classList.add('last')
        } else alert('cant go here')
-        
-        // if (currentPlayer == true) {
-        //     currentCircle.classList.add('last')
-        // } else if (currentPlayer == false){
-        //     currentCircle.classList.add('last')
         }
        
-    })
+    }
 
 }
 
@@ -237,6 +248,7 @@ function playGame () {
             changeTurns()
         } )
     })
+    
 }
     
     
