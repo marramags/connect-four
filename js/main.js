@@ -102,8 +102,21 @@ let gameBoardArr = [
 
     const allPointers = document.querySelectorAll('.all-pointers'); //grabbing all pointers
     const allCircles = document.querySelectorAll('.circles'); //grabbing all circles
+
+    const column1 = document.querySelectorAll('.column1')
+    const column2 = document.querySelectorAll('.column2')
+    const resetBtn = document.querySelector('.restart');
+    let message = document.getElementsByClassName('message');
     let currentPlayer = true;
-    // allCircles.addEventListener 
+    let board;
+    let player1 = [];
+    let player2 = [];
+    let player = "Player 1"
+
+resetBtn.addEventListener('click', startGame);
+
+let columns;
+
 
 
     startGame();
@@ -125,12 +138,49 @@ function playGame () {
 
 }
 
-allCircles.forEach(redColor => {
-    if (redColor.backgroundColor === 'red') {
-        player1.push(redColor.getAttribute('id'))
-    }
-})
+// allCircles.forEach(redColor => {
+//     if (redColor.backgroundColor === 'red') {
+//         player1.push(redColor.getAttribute('id'))
+//     }
+// })
 // console.log(player1)
+
+
+// allCircles.forEach(currentCircle => {
+//  currentCircle.addEventListener('click', function () {
+//     alert('you got this')
+//  })
+//  })
+
+// function dropToBottom
+
+// for (let y = )
+
+
+// dropping to bottom idea
+allCircles.forEach(space => {
+    currentCircle.addEventListener('click', function () {
+       if (currentCircle.classList.contains('last') &&!currentCircle.classList.contains('last')){
+        if (currentPlayer == true) {
+            currentCircle.classList.add('last')
+        } else if (currentPlayer == false){
+            currentCircle.classList.add('last')
+        }
+       }
+    })
+    })
+   
+
+// for (let i =0; i < allCircles; i++) {
+//     allCircles.addEventListener('click', function (){
+//         alert('you got this' + i)
+//     })
+// }
+
+
+
+
+
     
     // add event listener for click: changes colors and calls changeTurns function
     function switchColors () {
@@ -169,6 +219,21 @@ allCircles.forEach(redColor => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
