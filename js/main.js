@@ -102,6 +102,9 @@ let gameBoardArr = [
 
     const allPointers = document.querySelectorAll('.all-pointers'); //grabbing all pointers
     const allCircles = document.querySelectorAll('.circles'); //grabbing all circles
+    const pointer0 = document.querySelector('.pointer-0');
+    const pointer1 = document.querySelector('.pointer-1');
+
 
     const column1 = document.querySelectorAll('.column1')
     const column2 = document.querySelectorAll('.column2')
@@ -112,10 +115,24 @@ let gameBoardArr = [
     let player1 = [];
     let player2 = [];
     let player = "Player 1"
+    let row = [5, 5, 5, 5, 5, 5]
+    let column = [1, 2, 3, 4, 5, 6]
 
 resetBtn.addEventListener('click', startGame);
 
 let columns;
+
+pointer0.addEventListener('click', function () {
+    column.forEach(space =>{
+        let index = 5
+        if (space,row[0] === null){
+            switchColors ()
+            index -= 1;
+        } else {
+            return;
+        }
+    })
+});
 
 
 
@@ -137,6 +154,19 @@ function playGame () {
     switchColors()
 
 }
+
+function playGame () {
+    allCircles.forEach(redColor => {
+            player1 = [];
+        if (redColor.backgroundColor === 'red') {
+            player1.push(redColor.getAttribute('id'))
+            console.log(player1)
+        }
+    })
+    
+    switchColors()
+    // console.log(player1)
+    }
 
 // allCircles.forEach(redColor => {
 //     if (redColor.backgroundColor === 'red') {
@@ -233,7 +263,7 @@ allCircles.forEach(space => {
 
 
 
-    
+
 
 
 
