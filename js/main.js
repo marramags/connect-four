@@ -115,9 +115,12 @@ let gameBoardArr = [
     let board;
     let player1 = [];
     let player2 = [];
-    let player = "Player 1"
     let row = [5, 5, 5, 5, 5, 5]
     let column = [1, 2, 3, 4, 5, 6]
+    let p1Green = 'green';
+    let p2Blue = 'blue';
+    let firstPlayer = p1Green;
+
 
 resetBtn.addEventListener('click', startGame);
 
@@ -134,10 +137,6 @@ let columns;
 //             return;
 //         }
 //     });
-
-
-
-
 
 
     startGame();
@@ -206,21 +205,89 @@ function playGame () {
     
     // add event listener for click: changes colors and calls changeTurns function
     function switchColors () {
-    allCircles.forEach(currentCircle => {
+        allCircles.forEach(currentCircle => {
         let circleStyle = currentCircle.style;
         currentCircle.addEventListener('click', function () {
-            if (currentPlayer === true && circleStyle.backgroundColor !== '#4FD2EA'&& circleStyle.backgroundColor !== '#BD7BC8') {
-                circleStyle.backgroundColor = '#4FD2EA';
-            } else if (circleStyle.backgroundColor !== '#4FD2EA' && circleStyle.backgroundColor !== '#BD7BC8') {
-                circleStyle.backgroundColor = '#BD7BC8';
-            }
-            changeTurns()
-        } )
+            
+        if (firstPlayer === p1Green) {
+                
+            if(!document.getElementById('column2-row1').classList.contains('filled')) {
+                    document.getElementById('column1-row1').classList.add('filled')
+                    circleStyle.backgroundColor = 'green';
+                    firstPlayer = p2Blue;
+            } else if (!document.getElementById('column3-row1').classList.contains('filled')) {
+                 document.getElementById('column2-row1').classList.add('filled')
+                    circleStyle.backgroundColor = 'green';
+                    firstPlayer = p2Blue;
+            } else if (!document.getElementById('column4-row1').classList.contains('filled')) {
+                    document.getElementById('column3-row1').classList.add('filled')
+                    circleStyle.backgroundColor = 'green';
+                    firstPlayer = p2Blue;
+            } else if (document.getElementById('column5-row1').classList.contains('filled')) {
+                document.getElementById('column4-row1').classList.add('filled')
+                circleStyle.backgroundColor = 'green';
+                firstPlayer = p2Blue;
+            } else if (document.getElementById('column6-row1').classList.contains('filled')) {
+                document.getElementById('column5-row1').classList.add('filled')
+                circleStyle.backgroundColor = 'green';
+                firstPlayer = p2Blue;
+             
+             } else {
+                    console.log('bye')
+                }
+                
+            } else {
+                 if (document.getElementById('column2-row1').classList.contains('filled')) {
+                    document.getElementById('column1-row1').classList.add('filled')
+                    circleStyle.backgroundColor = 'blue';
+                    firstPlayer = p1Green;
+            } else if (document.getElementById('column3-row1').classList.contains('filled')) {
+                 document.getElementById('column2-row1').classList.add('filled')
+                    circleStyle.backgroundColor = "blue"
+                    firstPlayer = p1Green;
+            } else if (document.getElementById('column4-row1').classList.contains('filled')) {
+                    document.getElementById('column3-row1').classList.add('filled')
+                    circleStyle.backgroundColor = 'blue';
+                    firstPlayer = p1Green;
+            } else if (document.getElementById('column5-row1').classList.contains('filled')) {
+                document.getElementById('column4-row1').classList.add('filled')
+                circleStyle.backgroundColor = 'blue';
+                firstPlayer = p1Green;
+            } else if (document.getElementById('column6-row1').classList.contains('filled')) {
+                document.getElementById('column5-row1').classList.add('filled')
+                circleStyle.backgroundColor = 'blue';
+                firstPlayer = p1Green;
+            }   
+
+                console.log('hello');
+                circleStyle.backgroundColor = 'blue';
+                firstPlayer = p1Green;
+            } 
+
+            // if (currentPlayer === true && circleStyle.backgroundColor !== '#4FD2EA'&& circleStyle.backgroundColor !== '#BD7BC8') {
+            //     circleStyle.backgroundColor = '#4FD2EA';
+            // } else if (circleStyle.backgroundColor !== '#4FD2EA' && circleStyle.backgroundColor !== '#BD7BC8') {
+            //     circleStyle.backgroundColor = '#BD7BC8';
+            // }
+        //     changeTurns()
+        // } )
+    
+    
+
+    //change colors 
+//     if(document.getElementsByClassName('.allCircles')) {
+//         circleStyle.backgroundColor = 'green';
+//         firstPlayer = p2Blue;
+//     }
+// } else {
+
+//     circleStyle.backgroundColor = 'blue';
+//     firstPlayer = p1Green;
+//     }
+        })
     })
-    
 }
-    
-    
+
     
     
     function changeTurns() {
@@ -232,7 +299,7 @@ function playGame () {
         currentPlayer = !currentPlayer
       
     }
-    
+      
 
 
 
